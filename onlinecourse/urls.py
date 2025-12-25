@@ -3,8 +3,10 @@ from . import views
 
 app_name = 'onlinecourse'
 urlpatterns = [
-    # Path for the exam submission
+    # Path for exam submission
     path('course/<int:course_id>/submit/', views.submit, name='submit'),
-    # Path for the exam results
-    path('course/<int:course_id>/submission/<int:submission_id>/result/', views.show_exam_result, name='show_exam_result'),
+    
+    # Path for showing exam result
+    path('course/<int:course_id>/submission/<int:submission_id>/result/', 
+         views.show_exam_result, name='show_exam_result'),
 ]
